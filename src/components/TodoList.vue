@@ -11,7 +11,7 @@ const { todos, newTodo, addTodo, toggleTodo, removeTodo } = useTodos();
 <template>
   <div>
     <h1>Todo List</h1>
-    <input v-model="newTodo" @keyup.enter="addTodo" placeholder="Add a new todo" />
+    <input class="input" v-model="newTodo" @keyup.enter="addTodo" placeholder="Add a new todo" />
     <button @click="addTodo">Add</button>
     <ul>
       <li v-for="(todo, index) in todos" :key="index">
@@ -32,7 +32,7 @@ const { todos, newTodo, addTodo, toggleTodo, removeTodo } = useTodos();
 h1 {
   font-size: 24px;
 }
-input {
+.input {
   width: 20rem;
   height: 2.5rem;
   padding: 5px;
